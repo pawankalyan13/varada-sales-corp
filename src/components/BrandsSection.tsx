@@ -1,5 +1,5 @@
-import logoAgl from "@/assets/logo-agl.png";
-import logoVarmora from "@/assets/logo-varmora.png";
+import logoAgl from "@/assets/logo-agl-updated.png";
+import logoVarmora from "@/assets/logo-varmora-updated.png";
 import logoKajaria from "@/assets/logo-kajaria.png";
 import logoSimpolo from "@/assets/logo-simpolo.png";
 import logoJohnson from "@/assets/logo-johnson.png";
