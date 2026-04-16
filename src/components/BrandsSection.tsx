@@ -1,0 +1,25 @@
+const brands = ["AGL", "VARMORA", "KAJARIA", "SIMPOLO", "JOHNSON"];
+
+const BrandsSection = () => {
+  return (
+    <section id="brands" className="mt-24 lg:mt-32 py-16 border-y border-foreground/10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <p className="text-center text-[10px] uppercase tracking-[0.4em] font-bold text-tannin mb-12">
+          Authorized Dealer of India's Leading Brands
+        </p>
+        <div className="flex flex-wrap justify-center lg:justify-between items-center gap-8 lg:gap-12 opacity-50">
+          {brands.map((brand) => (
+            <span
+              key={brand}
+              className="font-serif text-2xl lg:text-3xl font-semibold tracking-wider"
+            >
+              {brand}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BrandsSection;
