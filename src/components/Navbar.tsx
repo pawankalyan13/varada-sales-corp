@@ -7,13 +7,13 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-stone-light/80 backdrop-blur-md border-b border-foreground/5">
       <div className="max-w-7xl mx-auto flex justify-between items-end px-6 lg:px-12 py-6">
-        <div className="space-y-1">
-          <p className="text-[10px] tracking-[0.3em] uppercase font-semibold text-tannin">
+        <div className="space-y-0.5">
+          <h1 className="text-xl lg:text-2xl font-serif font-bold tracking-tight text-foreground">
+            VARADA SALES CORPORATION
+          </h1>
+          <p className="text-[9px] tracking-[0.3em] uppercase font-semibold text-tannin">
             Premium Tiles & Sanitaryware
           </p>
-          <h1 className="text-2xl lg:text-3xl font-serif font-semibold tracking-tight text-foreground">
-            VARADA SALES
-          </h1>
         </div>
 
         {/* Desktop Nav */}
