@@ -16,7 +16,7 @@ const ShowroomSection = () => {
               <MapPin size={18} className="text-tannin mt-0.5 shrink-0" />
               <div>
                 <p className="font-semibold text-foreground">Varada Sales Corporation</p>
-                <p>Maripalem, Visakhapatnam<br />Andhra Pradesh, India</p>
+                <p>6WW+C5C, PF Office Rd,<br />Marripalem VUDA Layout, Marripalem,<br />Visakhapatnam, Andhra Pradesh 530009</p>
               </div>
             </div>
             <div className="flex gap-3 items-start">
@@ -32,7 +32,7 @@ const ShowroomSection = () => {
             </div>
           </div>
           <a
-            href="https://maps.google.com/?q=Maripalem+Visakhapatnam"
+            href="https://maps.google.com/?q=6WW%2BC5C+PF+Office+Rd+Marripalem+VUDA+Layout+Visakhapatnam+530009"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-foreground text-background px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase hover:bg-tannin transition-colors"
