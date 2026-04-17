@@ -32,7 +32,7 @@ const ShowroomSection = () => {
             </div>
           </div>
           <a
-            href="https://maps.google.com/?q=6WW%2BC5C+PF+Office+Rd+Marripalem+VUDA+Layout+Visakhapatnam+530009"
+            href="https://share.google/a9pmfvmYesFASDCXX"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-foreground text-background px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase hover:bg-tannin transition-colors"
