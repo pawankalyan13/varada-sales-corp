@@ -1,4 +1,5 @@
 import { MapPin, Phone, Clock } from "lucide-react";
+import showroomImg from "@/assets/showroom-visit.jpg";
 
 const ShowroomSection = () => {
   return (
