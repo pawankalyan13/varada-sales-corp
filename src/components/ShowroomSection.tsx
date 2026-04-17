@@ -1,4 +1,3 @@
-import showroomImg from "@/assets/showroom-visit.jpg";
 import { MapPin, Phone, Clock } from "lucide-react";
 
 const ShowroomSection = () => {
@@ -42,15 +41,15 @@ const ShowroomSection = () => {
         </div>
         <div className="lg:col-span-8">
           <div className="w-full aspect-video bg-granite relative overflow-hidden">
-            <img
-              src={showroomImg}
-              alt="Varada Sales Corporation showroom"
+            <iframe
+              src="https://www.google.com/maps?q=6WW%2BC5C+PF+Office+Rd+Marripalem+VUDA+Layout+Visakhapatnam+530009&output=embed"
+              title="Varada Sales Corporation showroom location on Google Maps"
               loading="lazy"
-              width={1200}
-              height={600}
-              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full border-0 grayscale contrast-110"
+              allowFullScreen
             />
-            <div className="absolute inset-0 border border-card/10 m-4" />
+            <div className="absolute inset-0 border border-card/10 m-4 pointer-events-none" />
           </div>
         </div>
       </div>
