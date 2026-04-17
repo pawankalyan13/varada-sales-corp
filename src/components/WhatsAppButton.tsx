@@ -1,5 +1,5 @@
 const WhatsAppButton = () => {
-  const phone = "910000000000"; // placeholder — update to real number
+  const phone = "919951508888";
   const message = encodeURIComponent("Hello Varada Sales Corporation, I'd like to enquire about your products.");
 
   return (
