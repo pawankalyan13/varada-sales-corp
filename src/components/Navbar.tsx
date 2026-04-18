@@ -8,21 +8,29 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-stone-light/80 backdrop-blur-md border-b border-foreground/5">
       <div className="max-w-7xl mx-auto flex justify-between items-end px-6 lg:px-12 py-6">
-        <div className="flex items-center gap-3">
+        <a
+          href="#top"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          aria-label="Back to top"
+          className="flex items-center gap-3 group"
+        >
           <img
             src={varadaLogo}
             alt="Varada Sales Corporation logo"
-            className="h-12 lg:h-14 w-auto object-contain"
+            className="h-12 lg:h-14 w-auto object-contain transition-transform group-hover:scale-105"
           />
           <div className="space-y-0.5">
-            <h1 className="text-xl lg:text-2xl font-serif font-bold tracking-tight text-foreground">
+            <h1 className="text-xl lg:text-2xl font-serif font-bold tracking-tight text-foreground group-hover:text-tannin transition-colors">
               VARADA SALES CORPORATION
             </h1>
             <p className="text-[9px] tracking-[0.3em] uppercase font-semibold text-tannin">
               Premium Tiles & Sanitaryware
             </p>
           </div>
-        </div>
+        </a>
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex gap-12 text-[11px] tracking-widest uppercase font-semibold text-foreground">
