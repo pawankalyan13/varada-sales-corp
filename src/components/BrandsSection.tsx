@@ -26,7 +26,7 @@ const BrandsSection = () => {
               src={brand.logo}
               alt={`${brand.name} logo`}
               loading="lazy"
-              className="h-12 lg:h-16 w-auto grayscale hover:grayscale-0 transition-all duration-500 object-fill"
+              className="h-12 lg:h-16 w-auto transition-all duration-500 object-fill"
             />
           ))}
         </div>
