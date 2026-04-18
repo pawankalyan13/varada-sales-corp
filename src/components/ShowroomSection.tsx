@@ -42,17 +42,6 @@ const ShowroomSection = () => {
         </div>
         <div className="lg:col-span-8 space-y-6">
           <div className="w-full aspect-video bg-granite relative overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps?q=6WW%2BC5C+PF+Office+Rd+Marripalem+VUDA+Layout+Visakhapatnam+530009&output=embed"
-              title="Varada Sales Corporation showroom location on Google Maps"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full border-0 grayscale contrast-110"
-              allowFullScreen
-            />
-            <div className="absolute inset-0 border border-card/10 m-4 pointer-events-none" />
-          </div>
-          <div className="w-full aspect-video bg-granite relative overflow-hidden">
             <img
               src={showroomImg}
               alt="Inside the Varada Sales Corporation showroom"
@@ -65,6 +54,17 @@ const ShowroomSection = () => {
             <span className="absolute bottom-6 left-6 bg-background/90 px-3 py-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-foreground">
               Our Showroom
             </span>
+          </div>
+          <div className="w-full aspect-video bg-granite relative overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps?q=6WW%2BC5C+PF+Office+Rd+Marripalem+VUDA+Layout+Visakhapatnam+530009&output=embed"
+              title="Varada Sales Corporation showroom location on Google Maps"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full border-0 grayscale contrast-110"
+              allowFullScreen
+            />
+            <div className="absolute inset-0 border border-card/10 m-4 pointer-events-none" />
           </div>
         </div>
       </div>
