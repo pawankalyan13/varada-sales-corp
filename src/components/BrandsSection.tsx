@@ -1,8 +1,8 @@
 import logoAgl from "@/assets/logo-agl-updated.png";
 import logoVarmora from "@/assets/logo-varmora-updated.png";
-import logoKajaria from "@/assets/logo-kajaria-updated.png";
-import logoSimpolo from "@/assets/logo-simpolo-updated.png";
-import logoJohnson from "@/assets/logo-johnson-updated.png";
+import logoKajaria from "@/assets/logo-kajaria-v2.png";
+import logoSimpolo from "@/assets/logo-simpolo-v2.png";
+import logoJohnson from "@/assets/logo-johnson-v2.png";
 
 const brands = [
   { name: "AGL", logo: logoAgl },
