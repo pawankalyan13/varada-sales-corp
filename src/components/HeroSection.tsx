@@ -17,9 +17,9 @@ const HeroSection = () => {
                 <span className="italic text-tannin">Structural Excellence.</span>
               </h2>
               <p className="max-w-[50ch] text-sm text-muted-foreground leading-relaxed">
-                Authorized dealers of AGL, Varmora, Kajaria, Simpolo & Johnson.
-                Premium tiles, sanitaryware and bath fittings — all under one roof
-                at Maripalem, Visakhapatnam.
+                Authorized dealers of AGL, Varmora, Orient Bell,vitero premium tiles
+                and Aquel sanitaryware and bath fittings — all under one roof at
+                Maripalem, Visakhapatnam.
               </p>
             </div>
             <div className="flex flex-wrap gap-6 items-center mt-8">
