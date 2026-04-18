@@ -1,6 +1,8 @@
+import { useState } from "react";
 import heroImg from "@/assets/hero-showroom.jpg";
 
 const HeroSection = () => {
+  const [isColor, setIsColor] = useState(false);
   return (
     <section className="pt-28 lg:pt-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -39,16 +41,23 @@ const HeroSection = () => {
           </div>
 
           {/* Right image */}
-          <div className="lg:col-span-5 bg-granite relative overflow-hidden min-h-[300px]">
+          <button
+            type="button"
+            onClick={() => setIsColor((v) => !v)}
+            aria-label={isColor ? "Show grayscale image" : "Show color image"}
+            className="lg:col-span-5 bg-granite relative overflow-hidden min-h-[300px] cursor-pointer group text-left"
+          >
             <img
               src={heroImg}
               alt="Varada Sales Corporation showroom interior with premium tile displays"
-              className="w-full h-full object-cover grayscale contrast-125 opacity-90"
+              className={`w-full h-full object-cover transition-all duration-700 ${
+                isColor ? "grayscale-0 opacity-100 contrast-100" : "grayscale contrast-125 opacity-90"
+              }`}
               width={1200}
               height={1500}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent border-0" />
-          </div>
+          </button>
         </div>
       </div>
     </section>
