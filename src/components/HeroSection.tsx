@@ -47,7 +47,7 @@ const HeroSection = () => {
               width={1200}
               height={1500}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent border-0" />
           </div>
         </div>
       </div>
