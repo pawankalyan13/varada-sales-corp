@@ -86,12 +86,23 @@ const FloorTilesCatalogue = () => {
                   className="group border border-foreground/10 bg-card overflow-hidden hover:border-tannin/40 transition-colors"
                 >
                   <div className="aspect-square bg-granite/40 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 via-transparent to-tannin/10" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
-                        Image coming soon
-                      </span>
-                    </div>
+                    {tile.image ? (
+                      <img
+                        src={tile.image}
+                        alt={`${tile.name} floor tile`}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 via-transparent to-tannin/10" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
+                            Image coming soon
+                          </span>
+                        </div>
+                      </>
+                    )}
                   </div>
                   <div className="p-4 space-y-1">
                     <p className="font-serif text-base">{tile.name}</p>
