@@ -1,4 +1,6 @@
 import aglStatuarioMarble from "@/assets/agl-statuario-marble.webp";
+import aglCarraraVeined from "@/assets/agl-carrara-veined.avif";
+import aglSlateCharcoal from "@/assets/agl-slate-charcoal.webp";
 
 const brandCatalogue = [
   {
@@ -6,8 +8,8 @@ const brandCatalogue = [
     tagline: "Italian-inspired large format tiles",
     tiles: [
       { name: "Statuario Marble", size: '24" × 48"', finish: "Glossy", image: aglStatuarioMarble },
-      { name: "Carrara Veined", size: '32" × 32"', finish: "Polished" },
-      { name: "Slate Charcoal", size: '24" × 24"', finish: "Matte" },
+      { name: "Carrara Veined", size: '32" × 32"', finish: "Polished", image: aglCarraraVeined },
+      { name: "Slate Charcoal", size: '24" × 24"', finish: "Matte", image: aglSlateCharcoal },
       { name: "Travertine Beige", size: '16" × 32"', finish: "Rustic" },
     ],
   },
