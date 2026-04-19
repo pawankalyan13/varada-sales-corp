@@ -12,12 +12,26 @@ const brands = [
   { name: "Johnson", logo: logoJohnson },
 ];
 
+// Offset the second row so it doesn't perfectly mirror the first
+const brandsRowTwo = [...brands.slice(2), ...brands.slice(0, 2)];
+
 const BrandsSection = () => {
-  // Duplicate the list so the marquee can loop seamlessly
-  const marqueeBrands = [...brands, ...brands];
+  // Duplicate each list so the marquee loops seamlessly
+  const marqueeRowOne = [...brands, ...brands];
+  const marqueeRowTwo = [...brandsRowTwo, ...brandsRowTwo];
+
+  const maskStyle = {
+    maskImage:
+      "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+    WebkitMaskImage:
+      "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+  };
 
   return (
-    <section id="brands" className="mt-24 lg:mt-32 py-16 border-y border-foreground/10 relative overflow-hidden">
+    <section
+      id="brands"
+      className="mt-24 lg:mt-32 py-16 border-y border-foreground/10 relative overflow-hidden"
+    >
       {/* Subtle ambient backdrop */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-tannin/[0.03] to-transparent pointer-events-none" />
 
@@ -29,29 +43,49 @@ const BrandsSection = () => {
           </p>
         </div>
 
-        <div
-          className="group relative overflow-hidden"
-          style={{
-            maskImage:
-              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-          }}
-        >
-          <div className="flex w-max animate-marquee gap-8 lg:gap-12 group-hover:[animation-play-state:paused]">
-            {marqueeBrands.map((brand, i) => (
-              <div
-                key={`${brand.name}-${i}`}
-                className="shrink-0 flex items-center justify-center px-8 lg:px-10 py-6 min-w-[180px] lg:min-w-[220px] border border-foreground/10 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-tannin/40 hover:bg-card hover:shadow-[0_8px_30px_-10px_hsl(var(--tannin)/0.25)] hover:-translate-y-1"
-              >
-                <img
-                  src={brand.logo}
-                  alt={`${brand.name} logo`}
-                  loading="lazy"
-                  className="h-16 lg:h-20 w-auto object-contain transition-all duration-500 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110"
-                />
-              </div>
-            ))}
+        <div className="space-y-6">
+          {/* Row 1 — left to right */}
+          <div
+            className="group relative overflow-hidden"
+            style={maskStyle}
+          >
+            <div className="flex w-max animate-marquee gap-8 lg:gap-12 group-hover:[animation-play-state:paused]">
+              {marqueeRowOne.map((brand, i) => (
+                <div
+                  key={`row1-${brand.name}-${i}`}
+                  className="shrink-0 flex items-center justify-center px-8 lg:px-10 py-6 min-w-[180px] lg:min-w-[220px] border border-foreground/10 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-tannin/40 hover:bg-card hover:shadow-[0_8px_30px_-10px_hsl(var(--tannin)/0.25)] hover:-translate-y-1"
+                >
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    loading="lazy"
+                    className="h-16 lg:h-20 w-auto object-contain transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2 — right to left (reverse) */}
+          <div
+            className="group relative overflow-hidden"
+            style={maskStyle}
+          >
+            <div className="flex w-max animate-marquee-reverse gap-8 lg:gap-12 group-hover:[animation-play-state:paused]">
+              {marqueeRowTwo.map((brand, i) => (
+                <div
+                  key={`row2-${brand.name}-${i}`}
+                  className="shrink-0 flex items-center justify-center px-8 lg:px-10 py-6 min-w-[180px] lg:min-w-[220px] border border-foreground/10 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-tannin/40 hover:bg-card hover:shadow-[0_8px_30px_-10px_hsl(var(--tannin)/0.25)] hover:-translate-y-1"
+                >
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    loading="lazy"
+                    className="h-16 lg:h-20 w-auto object-contain transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
