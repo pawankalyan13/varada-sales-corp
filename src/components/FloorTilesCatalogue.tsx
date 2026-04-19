@@ -1,9 +1,11 @@
+import aglStatuarioMarble from "@/assets/agl-statuario-marble.webp";
+
 const brandCatalogue = [
   {
     name: "AGL",
     tagline: "Italian-inspired large format tiles",
     tiles: [
-      { name: "Statuario Marble", size: '24" × 48"', finish: "Glossy" },
+      { name: "Statuario Marble", size: '24" × 48"', finish: "Glossy", image: aglStatuarioMarble },
       { name: "Carrara Veined", size: '32" × 32"', finish: "Polished" },
       { name: "Slate Charcoal", size: '24" × 24"', finish: "Matte" },
       { name: "Travertine Beige", size: '16" × 32"', finish: "Rustic" },
@@ -84,12 +86,23 @@ const FloorTilesCatalogue = () => {
                   className="group border border-foreground/10 bg-card overflow-hidden hover:border-tannin/40 transition-colors"
                 >
                   <div className="aspect-square bg-granite/40 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 via-transparent to-tannin/10" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
-                        Image coming soon
-                      </span>
-                    </div>
+                    {tile.image ? (
+                      <img
+                        src={tile.image}
+                        alt={`${tile.name} floor tile`}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 via-transparent to-tannin/10" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
+                            Image coming soon
+                          </span>
+                        </div>
+                      </>
+                    )}
                   </div>
                   <div className="p-4 space-y-1">
                     <p className="font-serif text-base">{tile.name}</p>
