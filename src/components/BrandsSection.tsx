@@ -13,22 +13,36 @@ const brands = [
 ];
 
 const BrandsSection = () => {
+  // Duplicate the list so the marquee can loop seamlessly
+  const marqueeBrands = [...brands, ...brands];
+
   return (
     <section id="brands" className="mt-24 lg:mt-32 py-16 border-y border-foreground/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <p className="text-center text-[10px] uppercase tracking-[0.4em] font-bold text-tannin mb-12">
           Authorized Dealer of India's Leading Brands
         </p>
-        <div className="flex flex-wrap justify-center lg:justify-between items-center gap-8 lg:gap-6">
-          {brands.map((brand) => (
-            <img
-              key={brand.name}
-              src={brand.logo}
-              alt={`${brand.name} logo`}
-              loading="lazy"
-              className="h-20 lg:h-28 w-auto transition-all duration-500 object-contain"
-            />
-          ))}
+
+        <div
+          className="group relative overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          }}
+        >
+          <div className="flex w-max animate-marquee gap-16 lg:gap-24 group-hover:[animation-play-state:paused]">
+            {marqueeBrands.map((brand, i) => (
+              <img
+                key={`${brand.name}-${i}`}
+                src={brand.logo}
+                alt={`${brand.name} logo`}
+                loading="lazy"
+                className="h-20 lg:h-28 w-auto object-contain shrink-0"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
