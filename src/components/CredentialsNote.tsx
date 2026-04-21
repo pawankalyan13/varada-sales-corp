@@ -15,7 +15,7 @@ const CredentialsNote = () => {
             <h3 className="font-serif text-3xl lg:text-4xl mt-3 leading-tight">
               Proudly entrusted with
               <br />
-              <span className="italic">Indian Navy</span> projects &amp; contracts.
+              <span className="italic">Indian Navy</span> projects &amp; government projects.
             </h3>
           </div>
 
