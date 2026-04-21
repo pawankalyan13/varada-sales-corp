@@ -1,4 +1,4 @@
-import { Anchor, Landmark, ShieldCheck } from "lucide-react";
+import { Anchor, FileCheck, ShieldCheck } from "lucide-react";
 
 const CredentialsNote = () => {
   return (
@@ -13,18 +13,17 @@ const CredentialsNote = () => {
               Trusted Supplier
             </span>
             <h3 className="font-serif text-3xl lg:text-4xl mt-3 leading-tight">
-              Proudly supplying the
+              Proudly entrusted with
               <br />
-              <span className="italic">Indian Navy</span> & government projects.
+              <span className="italic">Indian Navy</span> projects &amp; contracts.
             </h3>
           </div>
 
           <div className="lg:col-span-7">
             <p className="text-sm lg:text-base text-muted-foreground leading-relaxed mb-8">
-              Over the years, Varada Sales Corporation has earned the trust of
-              prestigious institutions — supplying premium tiles, marble and
-              building materials to the Indian Navy and numerous state &amp;
-              central government projects across the region.
+              Varada Sales Corporation has earned the trust of the Indian Navy
+              — supplying premium tiles, marble and building materials across
+              multiple Navy projects and awarded contracts.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-foreground/10">
@@ -40,13 +39,13 @@ const CredentialsNote = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Landmark size={20} className="text-tannin mt-0.5 shrink-0" />
+                <FileCheck size={20} className="text-tannin mt-0.5 shrink-0" />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.15em]">
-                    Govt. Projects
+                    Awarded Contracts
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Multiple deliveries
+                    Delivered on time
                   </p>
                 </div>
               </div>
