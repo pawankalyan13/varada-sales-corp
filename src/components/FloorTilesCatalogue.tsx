@@ -2,6 +2,8 @@ import aglStatuarioMarble from "@/assets/agl-statuario-marble.webp";
 import aglCarraraVeined from "@/assets/agl-carrara-veined.avif";
 import aglSlateCharcoal from "@/assets/agl-slate-charcoal.webp";
 import aglTravertineBeige from "@/assets/agl-travertine-beige.jpeg";
+import RevealOnScroll from "@/components/motion/RevealOnScroll";
+import TiltCard from "@/components/motion/TiltCard";
 
 const brandCatalogue = [
   {
@@ -52,7 +54,7 @@ const FloorTilesCatalogue = () => {
       id="catalogue"
       className="mt-24 lg:mt-32 max-w-7xl mx-auto px-6 lg:px-12"
     >
-      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+      <RevealOnScroll className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
         <div>
           <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-tannin">
             Floor Tiles Catalogue
@@ -65,12 +67,12 @@ const FloorTilesCatalogue = () => {
           A selection of floor tiles available at our Maripalem showroom. Visit
           us to view full ranges and live samples.
         </p>
-      </div>
+      </RevealOnScroll>
 
       <div className="space-y-16">
         {brandCatalogue.map((brand) => (
           <div key={brand.name}>
-            <div className="flex items-baseline justify-between border-b border-foreground/10 pb-4 mb-6">
+            <RevealOnScroll className="flex items-baseline justify-between border-b border-foreground/10 pb-4 mb-6">
               <div>
                 <h4 className="font-serif text-2xl lg:text-3xl">{brand.name}</h4>
                 <p className="text-xs text-muted-foreground mt-1">
@@ -80,15 +82,16 @@ const FloorTilesCatalogue = () => {
               <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-tannin">
                 {brand.tiles.length} Designs
               </span>
-            </div>
+            </RevealOnScroll>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-              {brand.tiles.map((tile) => (
-                <article
-                  key={tile.name}
-                  className="group border border-foreground/10 bg-card overflow-hidden hover:border-tannin/40 transition-colors"
+            <div className="scene-3d grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+              {brand.tiles.map((tile, ti) => (
+                <RevealOnScroll key={tile.name} variant="zoom" delay={ti * 80}>
+                <TiltCard as="article" className="h-full" lift={8}>
+                <div
+                  className="group h-full border border-foreground/10 bg-card overflow-hidden hover:border-tannin/40 transition-colors shadow-studio"
                 >
-                  <div className="aspect-square bg-granite/40 relative overflow-hidden">
+                  <div className="aspect-square bg-granite/40 relative overflow-hidden slab">
                     {tile.image ? (
                       <img
                         src={tile.image}
@@ -114,7 +117,9 @@ const FloorTilesCatalogue = () => {
                       <span className="text-tannin">{tile.finish}</span>
                     </div>
                   </div>
-                </article>
+                </div>
+                </TiltCard>
+                </RevealOnScroll>
               ))}
             </div>
           </div>
@@ -128,7 +133,7 @@ const FloorTilesCatalogue = () => {
         </p>
         <a
           href="#showroom"
-          className="bg-foreground text-background px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase hover:bg-tannin transition-colors"
+          className="btn-3d bg-foreground text-background px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase hover:bg-tannin"
         >
           Enquire at Showroom
         </a>

@@ -1,9 +1,11 @@
 import { Anchor, FileCheck, ShieldCheck } from "lucide-react";
+import RevealOnScroll from "@/components/motion/RevealOnScroll";
 
 const CredentialsNote = () => {
   return (
     <section className="mt-24 lg:mt-32 max-w-7xl mx-auto px-6 lg:px-12">
-      <div className="relative border border-foreground/10 bg-card/40 backdrop-blur-sm p-8 lg:p-12 overflow-hidden">
+      <RevealOnScroll variant="depth" className="relative border border-foreground/10 glass-panel shadow-studio-lg p-8 lg:p-12 overflow-hidden">
+        <div className="absolute inset-0 arch-grid arch-grid-mask pointer-events-none" aria-hidden="true" />
         {/* Decorative accent */}
         <div className="absolute top-0 left-0 h-1 w-24 bg-tannin" />
 
@@ -63,7 +65,7 @@ const CredentialsNote = () => {
             </div>
           </div>
         </div>
-      </div>
+      </RevealOnScroll>
     </section>
   );
 };
