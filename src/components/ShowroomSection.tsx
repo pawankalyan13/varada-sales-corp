@@ -1,11 +1,13 @@
 import { MapPin, Phone, Clock } from "lucide-react";
 import showroomImg from "@/assets/showroom-visit.jpg";
+import RevealOnScroll from "@/components/motion/RevealOnScroll";
+import ParallaxLayer from "@/components/motion/ParallaxLayer";
 
 const ShowroomSection = () => {
   return (
     <section id="showroom" className="mt-24 lg:mt-32 mb-16 max-w-7xl mx-auto px-6 lg:px-12">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-        <div className="lg:col-span-4 space-y-8">
+        <RevealOnScroll className="lg:col-span-4 space-y-8">
           <h3 className="font-serif text-4xl">
             Visit Our
             <br />
@@ -35,13 +37,13 @@ const ShowroomSection = () => {
             href="https://share.google/a9pmfvmYesFASDCXX"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-foreground text-background px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase hover:bg-tannin transition-colors"
+            className="btn-3d inline-block bg-foreground text-background px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase hover:bg-tannin"
           >
             Get Directions
           </a>
-        </div>
-        <div className="lg:col-span-8 space-y-6">
-          <div className="w-full aspect-video bg-granite relative overflow-hidden">
+        </RevealOnScroll>
+        <RevealOnScroll variant="depth" delay={120} className="lg:col-span-8 space-y-6 scene-3d">
+          <ParallaxLayer speed={16} className="w-full aspect-video bg-granite relative overflow-hidden slab shadow-studio-lg">
             <img
               src={showroomImg}
               alt="Inside the Varada Sales Corporation showroom"
@@ -54,8 +56,8 @@ const ShowroomSection = () => {
             <span className="absolute bottom-6 left-6 bg-background/90 px-3 py-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-foreground">
               Our Showroom
             </span>
-          </div>
-          <div className="w-full aspect-video bg-granite relative overflow-hidden">
+          </ParallaxLayer>
+          <div className="w-full aspect-video bg-granite relative overflow-hidden slab shadow-studio">
             <iframe
               src="https://www.google.com/maps?q=6WW%2BC5C+PF+Office+Rd+Marripalem+VUDA+Layout+Visakhapatnam+530009&output=embed"
               title="Varada Sales Corporation showroom location on Google Maps"
