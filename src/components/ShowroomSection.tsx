@@ -68,7 +68,7 @@ const ShowroomSection = () => {
             />
             <div className="absolute inset-0 border border-card/10 m-4 pointer-events-none" />
           </div>
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
   );
