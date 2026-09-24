@@ -37,7 +37,7 @@ const Navbar = () => {
           <a href="#collections" className="hover:text-tannin transition-colors">Collections</a>
           <a href="#brands" className="hover:text-tannin transition-colors">Brands</a>
           <a href="#showroom" className="hover:text-tannin transition-colors">Showroom</a>
-          <a href="#contact" className="hover:text-tannin transition-colors">Contact</a>
+          <a href="#enquiry" className="hover:text-tannin transition-colors">Enquiry</a>
         </div>
 
         {/* Mobile toggle */}
@@ -52,7 +52,7 @@ const Navbar = () => {
           <a href="#collections" onClick={() => setOpen(false)}>Collections</a>
           <a href="#brands" onClick={() => setOpen(false)}>Brands</a>
           <a href="#showroom" onClick={() => setOpen(false)}>Showroom</a>
-          <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
+          <a href="#enquiry" onClick={() => setOpen(false)}>Enquiry</a>
         </div>
       )}
     </nav>

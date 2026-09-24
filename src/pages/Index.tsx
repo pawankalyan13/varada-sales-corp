@@ -5,6 +5,7 @@ import FloorTilesCatalogue from "@/components/FloorTilesCatalogue";
 import BrandsSection from "@/components/BrandsSection";
 import CredentialsNote from "@/components/CredentialsNote";
 import ShowroomSection from "@/components/ShowroomSection";
+import EnquirySection from "@/components/EnquirySection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -18,6 +19,7 @@ const Index = () => {
       <CredentialsNote />
       <FloorTilesCatalogue />
       <ShowroomSection />
+      <EnquirySection />
       <Footer />
       <WhatsAppButton />
     </div>
